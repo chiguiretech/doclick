@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Logo = () => {
   return (
-    <h3 className='text-5xl text-teal'>
+    <h3 className='text-3xl text-teal font-bold'>
       <Link href='/'>Doclick</Link>
     </h3>
   );
