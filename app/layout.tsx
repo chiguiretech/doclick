@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='es'>
-      <body className={`${inter.className} ${lexend.className}`}>{children}</body>
+      <body className={`${lexend.className} ${inter.className}`}>{children}</body>
     </html>
   );
 }

@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui'],
-        serif: ['var(--font-lexend)', 'system-ui'],
+        sans: ['Inter', 'system-ui'],
+        serif: ['Lexend', 'system-ui'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -25,6 +25,7 @@ const config: Config = {
         white: '#FFFFFF',
         steelBlue: '#94A3B8',
         lightGray: '#D9D9D9',
+        textColor: '#1b2734',
       },
     },
   },
