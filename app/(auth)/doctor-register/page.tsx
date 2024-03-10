@@ -7,12 +7,12 @@ const DoctorRegisterPage = () => {
   return (
     <div className='bg-[#f8f9fa] h-screen'>
       <DoctorRegisterHeader />
-      <main className='max-w-5xl m-auto px-8'>
+      <main className='max-w-5xl m-auto '>
         <h1 className='text-center text-2xl text-textColor my-12'>
           Registrarme como médico
         </h1>
         <form className='w-full flex justify-center bg-red font-sans'>
-          <div className='bg-white p-6 rounded-md w-full max-w-md flex flex-col gap-8 shadow'>
+          <div className='bg-white p-5 rounded-md w-full max-w-md flex flex-col gap-8 shadow'>
             <section className='flex flex-col gap-5 '>
               <div className='flex flex-col'>
                 <label htmlFor='email' className='text-textColo text-sm mb-2'>
