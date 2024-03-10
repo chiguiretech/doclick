@@ -1,7 +1,13 @@
 import SimpleHeader from '@/app/ui/Header/SimpleHeader';
 import Provider from '@/app/ui/Provider';
 import GoogleIcon from '@/app/ui/icons/Google';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Iniciar sesión como médico | Doclick',
+  description: 'Iniciar sesión como médico',
+};
 
 const Login = () => {
   return (
@@ -55,7 +61,7 @@ const Login = () => {
               <Provider text='Continuar con google' link='/' icon={<GoogleIcon />} />
             </section>
             <section className='mt-5'>
-              <p className='font-light text-charcoal'>
+              <p className='font-light text-charcoal text-center'>
                 ¿Estás empezando a usar Doclick?{' '}
                 <Link href='/doctor-register' className='font-bold text-teal'>
                   Unirse ahora
