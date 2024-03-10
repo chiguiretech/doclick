@@ -1,7 +1,13 @@
 import DoctorRegisterHeader from '@/app/ui/Header/DoctorRegisterHeader';
 import Provider from '@/app/ui/Provider';
 import GoogleIcon from '@/app/ui/icons/Google';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Registrate como médico | Doclick',
+  description: 'Registrarme como médico',
+};
 
 const DoctorRegisterPage = () => {
   return (
@@ -52,7 +58,7 @@ const DoctorRegisterPage = () => {
               <Provider text='Continuar con google' link='/' icon={<GoogleIcon />} />
             </section>
             <section className='mt-5'>
-              <p className='font-light text-charcoal'>
+              <p className='font-light text-charcoal text-center'>
                 ¿Ya estás en Doclick?{' '}
                 <Link href='login' className='font-bold text-teal'>
                   Iniciar sesión
