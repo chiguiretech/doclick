@@ -13,13 +13,13 @@ const Login = () => {
   return (
     <div className='bg-[#f8f9fa] h-screen'>
       <SimpleHeader />
-      <main className='max-w-5xl m-auto '>
+      <main className='max-w-5xl m-auto'>
         <h1 className='text-center text-2xl text-textColor my-12'>
           Iniciar sesión como médico
         </h1>
         <form className='w-full flex justify-center bg-red font-sans'>
           <div className='bg-white p-5 rounded-md w-full max-w-md flex flex-col gap-8 shadow'>
-            <section className='flex flex-col gap-5 '>
+            <section className='flex flex-col gap-5'>
               <div className='flex flex-col'>
                 <label htmlFor='email' className='text-textColo text-sm mb-2'>
                   Email
@@ -41,7 +41,7 @@ const Login = () => {
                 />
               </div>
               <p className='text-teal text-sm font-bold'>
-                <Link href='/'>¿Has olvidado tu contraseña?</Link>
+                <Link href='/reset-password'>¿Has olvidado tu contraseña?</Link>
               </p>
               <button className='bg-teal font-bold text-white rounded-full p-3'>
                 Iniciar sesión
