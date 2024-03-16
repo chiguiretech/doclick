@@ -1,34 +1,30 @@
 'use client';
 
-import Provider from '@/app/ui/Provider';
-import GoogleIcon from '@/app/ui/icons/Google';
 import Link from 'next/link';
+import Provider from '../../Provider';
 import { useForm } from 'react-hook-form';
-import { RiEyeLine, RiEyeOffLine } from '@remixicon/react';
 import { useState } from 'react';
-type LoginForm = {
+import GoogleIcon from '../../icons/Google';
+import { RiEyeLine, RiEyeOffLine } from '@remixicon/react';
+
+type RegisterDoctorForm = {
   email: string;
   password: string;
 };
 
-/**
- *
- * Hay que tener en cuenta los errores generales cuando se intente hacer login y mostrarlos
- */
-
-const LoginForm = () => {
+const RegisterDoctorForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginForm>();
+  } = useForm<RegisterDoctorForm>();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const onSubmit = (data: LoginForm) => {
+  const onSubmit = (data: RegisterDoctorForm) => {
     console.log(data);
   };
 
@@ -38,7 +34,7 @@ const LoginForm = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className='bg-white p-5 rounded-md w-full max-w-md flex flex-col gap-8 shadow'>
-        <section className='flex flex-col gap-5'>
+        <section className='flex flex-col gap-5 '>
           <div className='flex flex-col'>
             <label htmlFor='email' className='text-textColo text-sm mb-2'>
               Email
@@ -96,14 +92,11 @@ const LoginForm = () => {
               </p>
             )}
           </div>
-          <p className='text-teal text-sm font-bold'>
-            <Link href='/reset-password'>¿Has olvidado tu contraseña?</Link>
-          </p>
           <button className='bg-teal font-bold text-white rounded-full p-3 hover:opacity-85 transition-opacity'>
-            Iniciar sesión
+            Aceptar y unirse
           </button>
           <p className='text-center text-xs font-light text-charcoal'>
-            Al hacer clic en «Iniciar sesión» o «Continuar con», aceptas las Condiciones
+            Al hacer clic en «Aceptar y unirse» o «Continuar con», aceptas las Condiciones
             de uso, la Política de privacidad y la Política de cookies de Doclick.
           </p>
         </section>
@@ -117,9 +110,9 @@ const LoginForm = () => {
         </section>
         <section className='mt-5'>
           <p className='font-light text-charcoal text-center'>
-            ¿Estás empezando a usar Doclick?{' '}
-            <Link href='/doctor-register' className='font-bold text-teal'>
-              Unirse ahora
+            ¿Ya estás en Doclick?{' '}
+            <Link href='login' className='font-bold text-teal'>
+              Iniciar sesión
             </Link>
           </p>
         </section>
@@ -128,4 +121,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterDoctorForm;

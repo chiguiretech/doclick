@@ -9,7 +9,7 @@ type Props = {
 };
 const Provider = ({ text, icon, link }: Props) => {
   return (
-    <div className='rounded-full p-3 border-2 w-full'>
+    <div className='rounded-full p-3 border-2 w-full hover:bg-teal hover:bg-opacity-5 transition-colors duration-300'>
       <Link href={link} className='flex items-center justify-center gap-2'>
         {icon}
         <span className='font-sans text-charcoal'>{text}</span>
