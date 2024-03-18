@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import GoogleIcon from '../../icons/Google';
 import { RiEyeLine, RiEyeOffLine } from '@remixicon/react';
+import { signIn } from 'next-auth/react';
 
 type RegisterDoctorForm = {
   email: string;
@@ -26,6 +27,11 @@ const RegisterDoctorForm = () => {
 
   const onSubmit = (data: RegisterDoctorForm) => {
     console.log(data);
+    signIn('credentials', {
+      email: data.email,
+      password: data.password,
+      callbackUrl: '/',
+    });
   };
 
   return (

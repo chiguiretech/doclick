@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Lexend } from 'next/font/google';
 import './ui/globals.css';
+import SessionProvider from './ui/Providers/SessionProvider';
 
 const inter = Inter({ subsets: ['latin'], weight: ['300', '400', '500', '700'] });
 const lexend = Lexend({ subsets: ['latin'], weight: ['300', '400', '700'] });
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='es'>
-      <body className={`${lexend.className} ${inter.className}`}>{children}</body>
+      <body className={`${lexend.className} ${inter.className}`}>
+        <SessionProvider>{children}</SessionProvider>
+      </body>
     </html>
   );
 }
