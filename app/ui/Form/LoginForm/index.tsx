@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { RiEyeLine, RiEyeOffLine } from '@remixicon/react';
 import { useState } from 'react';
+
 type LoginForm = {
   email: string;
   password: string;
@@ -28,7 +29,7 @@ const LoginForm = () => {
     setShowPassword(!showPassword);
   };
 
-  const onSubmit = (data: LoginForm) => {
+  const onSubmit = async (data: LoginForm) => {
     console.log(data);
   };
 

@@ -1,7 +1,6 @@
 import ResetPasswordForm from '@/app/ui/Form/ResetPasswordForm';
 import FullHeader from '@/app/ui/Header/FullHeader';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Restablecer contraseña | Doclick',
